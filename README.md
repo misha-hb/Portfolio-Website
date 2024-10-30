@@ -13,6 +13,7 @@ Bootstrap: For responsive layout and styling.
 JavaScript, HTML, CSS: Core web technologies.
 
 ## 📂 Project Structure
+```plaintext
 Portfolio-Website/
 ├── public/
 │   └── index.html
