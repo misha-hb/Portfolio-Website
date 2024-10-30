@@ -1,4 +1,5 @@
 ## Portfolio Website
+A personal portfolio website built with React.js and Bootstrap. This single-page web application features a clean, scrollable design, allowing users to navigate seamlessly through sections including Home, Projects, and Contact.
 
 ## 📄 Features
 
