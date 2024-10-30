@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import Home from './components/Home';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import './App.css';
