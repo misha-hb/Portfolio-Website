@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Contact.css';
+import '../styles/Contact.css';
 import github from '../images/github.png';
 import linkedin from '../images/linkedin.png';
 import email from '../images/mail.png';

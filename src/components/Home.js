@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';
+import '../styles/Home.css';
 import profileImg from '../images/profile-img.jpeg'; // Adjust the path and file extension if necessary
 import github from '../images/github.png';
 import linkedin from '../images/linkedin.png';

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './Projects.css';
+import React from 'react';
+import '../styles/Projects.css';
 
 const projects = [
   {
