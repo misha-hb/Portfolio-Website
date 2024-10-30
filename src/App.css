@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar-custom {
+  background-color: #FBFFB0; /* Same as the inline style */
+  text-shadow: 1px 0 #F2F793, 0 2px #F2F793, 4px 0 #F2F793, 0 2px #F2F793;
+}
+
+.nav-link {
+  font-family: cursive1; /* Make sure cursive1 is defined in your CSS or imported correctly */
+  font-size: 50px;
+  font-weight: 400;
+  color: white;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.3s ease; /* Optional color transition */
+  color: white;
+  text-decoration: none; /* Remove underline */
+  border: none;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom:15px; /* Adjust the underline position */
+  width: 0;
+  height: 5px;
+  background-color: #F2F793;
+  transition: width 0.3s ease; /* Animation speed */
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%; /* Expands the underline on hover */
+}

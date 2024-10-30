@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import './App.css';
 
 function App() {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the section
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar className="navbar-custom" expand="lg" fixed="top">
+      <Container>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mx-auto" style={{ width: '100%', justifyContent: 'space-evenly' }}>
+              <Nav.Link onClick={() => scrollToSection('home')}>home</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection('projects')}>projects</Nav.Link>
+              <Nav.Link onClick={() => scrollToSection('contact')}>contact</Nav.Link>
+            </Nav>
+       </Navbar.Collapse>
+       </Container>
+      </Navbar>
+        <section id="home"><Home /></section>
+        <section id="projects"><Projects /></section>
+        <section id="contact"><Contact /></section>
+    </Router>
   );
 }
 

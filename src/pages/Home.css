@@ -1,0 +1,97 @@
+#home {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  overflow: auto;
+}
+
+.profile-image {
+  width: 250px; /* Adjust the size as needed */
+  height: auto;
+  border-radius: 50%; /* Makes the image circular */
+  margin-bottom: 20px;
+}
+
+.home-container {
+  display: flex;
+  height: 100vh; /* Full screen height */
+}
+
+.left-column {
+  flex: 1.25;
+  background-color: #eaf6db; /* Add any background color */
+  flex-direction: column; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* The right column takes up 2/3 of the width */
+.right-column {
+  flex: 1.75;
+  background-color: #ede1f4; /* Add any background color */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Align the text to the left */
+  justify-content: center; /* Center the content vertically */
+  text-align: center;
+  padding: 75px; /* Add padding for better spacing */
+  padding-top: 10rem;
+}
+
+h1.heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'cursive2';
+  text-shadow: 1px 0 #a999b5, 0 5px #a999b5, 5px 0 #a999b5, 0 1px #a999b5;
+  color: #CBC0D3;
+}
+
+p.about {
+  font-size: 1.2rem;
+  margin-bottom: 20px; /* Space between paragraphs */
+  line-height: 1.5; /* Improve readability */
+  font-family: 'rolemodel';
+  font-weight: bolder;
+  word-spacing: 1px;
+  letter-spacing: 0.5px;
+}
+
+.icon-links a {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Slightly enlarges the icon on hover */
+  filter: brightness(1.2); /* Makes the icon slightly brighter on hover */
+}
+
+#home .icon-links a {
+  position: relative; /* Required to position the pseudo-element */
+}
+
+#home .icon-links a::after {
+  content: ''; /* Creates the underline */
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 0;
+  height: 10px;
+  background-color: #c3ec91; /* Green underline for the home page */
+  transition: width 0.3s ease;
+}
+
+#home .icon-links a:hover::after {
+  width: 100%; 
+}

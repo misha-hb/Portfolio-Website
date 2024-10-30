@@ -1,0 +1,129 @@
+.contact-section {
+    background-color: #fff2f9; /* Background color for the projects section */
+    padding-top: 70px; /* Add padding to push content below the navbar */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    min-height: 100vh; /* Adjust height based on navbar height */
+  }
+  
+  .contact-content {
+    text-align: center; /* Center align text within the content */
+  }
+  
+  .contact-title {
+    font-size: 40px; /* Title font size */
+    font-family: cursive2;
+    margin-bottom: 2rem; /* Space below the title */
+    color: #FFD6EC;
+    text-shadow: 1px 0 #FF85C6, 0 5px #FF85C6, 5px 0 #FF85C6, 0 1px #FF85C6;
+  }
+
+  .icon-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Slightly enlarges the icon on hover */
+  filter: brightness(1.2); /* Makes the icon slightly brighter on hover */
+}
+
+.icon-links a {
+  padding-top: 2rem;
+  position: relative; 
+}
+
+.icon-links a::after {
+  content: ''; /* Creates the underline */
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 0;
+  height: 10px;
+  background-color: #FF85C6;
+  transition: width 0.3s ease;
+}
+
+.icon-links a:hover::after {
+  width: 100%; 
+}
+
+.text {
+  font-family: rolemodel;
+  font-weight: bold;
+}
+
+.text-label {
+  font-family: rolemodel;
+  font-weight: bold;
+  font-size: large;
+}
+
+.text-heading {
+  font-family: rolemodel;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.message-form {
+  margin-top: 20px;
+}
+
+.message-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-form label {
+  margin-bottom: 10px;
+}
+
+.message-form input,
+.message-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.message-form button {
+  background-color: #FF85C6;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.message-form button:hover {
+  background-color: #FF85C6;
+}
+
+.contact-section .icon-links a {
+  position: relative; /* Required to position the pseudo-element */
+}
+
+.contact-section .icon-links a::after {
+  content: ''; /* Creates the underline */
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 0;
+  height: 10px;
+  background-color: #FF85C6; /* Pink underline */
+  transition: width 0.3s ease;
+}
+
+.contact-section .icon-links a:hover::after {
+  width: 100%; 
+}
