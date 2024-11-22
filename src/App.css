@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: eaf6db;
 }
 
 .App-link {
@@ -38,36 +38,37 @@
 }
 
 .navbar-custom {
-  background-color: #FBFFB0; /* Same as the inline style */
-  text-shadow: 1px 0 #F2F793, 0 2px #F2F793, 4px 0 #F2F793, 0 2px #F2F793;
+  background-color: #98c6f8; 
 }
 
 .nav-link {
-  font-family: cursive1; /* Make sure cursive1 is defined in your CSS or imported correctly */
-  font-size: 50px;
-  font-weight: 400;
+  font-family: 'notosans';
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(14, 13, 54);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
   color: white;
+  transform: scale(1.1);
 }
 
-.navbar-nav .nav-link {
-  position: relative;
-  transition: color 0.3s ease; /* Optional color transition */
-  color: white;
-  text-decoration: none; /* Remove underline */
-  border: none;
+.scroll-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #DE7E5D;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
 }
 
-.navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom:15px; /* Adjust the underline position */
-  width: 0;
-  height: 5px;
-  background-color: #F2F793;
-  transition: width 0.3s ease; /* Animation speed */
-}
-
-.navbar-nav .nav-link:hover::after {
-  width: 100%; /* Expands the underline on hover */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }

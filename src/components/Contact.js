@@ -42,7 +42,7 @@ const Contact = () => {
   return (
     <div className="contact-section">
       <div className="contact-content">
-        <h2 className="contact-title">Contact</h2>
+        <h1 className="contact-title"><span className="highlight-contact">Contact</span></h1>
           <div className="message-form">
             {!submitted ? (
               <form onSubmit={handleSubmit}>

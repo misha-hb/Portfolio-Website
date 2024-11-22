@@ -1,27 +1,26 @@
 #home {
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f9fa;
+  background-color: white;
   overflow: auto;
 }
 
 .profile-image {
-  width: 250px; /* Adjust the size as needed */
+  width: 250px; 
   height: auto;
-  border-radius: 50%; /* Makes the image circular */
-  margin-bottom: 20px;
+  border-radius: 50%;
 }
 
 .home-container {
   display: flex;
-  height: 100vh; /* Full screen height */
+  height: 100vh; 
 }
 
 .left-column {
   flex: 1.25;
-  background-color: #eaf6db; /* Add any background color */
+  background-color: white; 
   flex-direction: column; 
   display: flex;
   align-items: center;
@@ -32,32 +31,41 @@
 /* The right column takes up 2/3 of the width */
 .right-column {
   flex: 1.75;
-  background-color: #ede1f4; /* Add any background color */
+  background-color: white; 
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Align the text to the left */
-  justify-content: center; /* Center the content vertically */
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
   text-align: center;
-  padding: 75px; /* Add padding for better spacing */
-  padding-top: 10rem;
+  padding-right: 9rem;
 }
 
-h1.heading {
+.title-home {
   font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-family: 'cursive2';
-  text-shadow: 1px 0 #a999b5, 0 5px #a999b5, 5px 0 #a999b5, 0 1px #a999b5;
-  color: #CBC0D3;
+  font-family: 'notosans';
+  margin-bottom: 1.5rem !important;
+  color: #030723;
+  font-weight: bolder;
+}
+
+.hello {
+  font-size: 1.5rem; 
+  color: rgb(14, 13, 54);
 }
 
 p.about {
   font-size: 1.2rem;
-  margin-bottom: 20px; /* Space between paragraphs */
-  line-height: 1.5; /* Improve readability */
-  font-family: 'rolemodel';
-  font-weight: bolder;
-  word-spacing: 1px;
-  letter-spacing: 0.5px;
+  font-family: 'notosans';
+  color: rgb(14, 13, 54);
+}
+
+.highlight {
+  background-color: #fbffb0;
+  border-radius: 10px;
+  padding: 2px 4px;
+  display: inline-block;
+  height: 24px; 
+  line-height: 20px;
 }
 
 .icon-links a {
@@ -73,22 +81,22 @@ p.about {
 }
 
 .icon:hover {
-  transform: scale(1.2); /* Slightly enlarges the icon on hover */
-  filter: brightness(1.2); /* Makes the icon slightly brighter on hover */
+  transform: scale(1.2); 
+  filter: brightness(1.2); 
 }
 
 #home .icon-links a {
-  position: relative; /* Required to position the pseudo-element */
+  position: relative;
 }
 
 #home .icon-links a::after {
-  content: ''; /* Creates the underline */
+  content: ''; 
   position: absolute;
   left: 0;
-  bottom: -15px;
+  bottom: -17px;
   width: 0;
   height: 10px;
-  background-color: #c3ec91; /* Green underline for the home page */
+  background-color: #DE7E5D; 
   transition: width 0.3s ease;
 }
 

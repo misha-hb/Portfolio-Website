@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Home.css';
-import profileImg from '../images/profile-img.jpeg'; // Adjust the path and file extension if necessary
+import profileImg from '../images/profile-img.jpeg'; 
 import github from '../images/github.png';
 import linkedin from '../images/linkedin.png';
 import email from '../images/mail.png';
@@ -27,19 +27,19 @@ const Home = () => {
             </div>
           </div>
           <div className="right-column">
-            <h1 className='heading'>Hi, I'm Misha!</h1>
-            <div style={{marginTop: '15px'}}>
-              <p className='about'>I am a recent University graduate with a strong foundation in Computer Science 
-                and a drive to make the world a better place through technology. With experience 
-                in both frontend and backend development, I thrive on creating efficient, user-friendly 
-                solutions and inclusive systems that improves people’s lives for a better future. During 
-                my work experience, I modernized legacy systems, optimized performance, and 
-                ensured accessibility for all users.</p>
-              <p className='about'>My portfolio showcases projects where I’ve applied my technical skills to 
-                real-world problems, from creating responsive web interfaces to designing 
-                scalable backend infrastructures. When I'm not coding, you can find me with 
-                a book or at a yoga class.</p>
-            </div>
+            <h1 className='title-home'>About Me</h1>
+            <p className='about'>
+              <span className='hello'>Hello, </span> 
+              my name is Misha and I am a recent University graduate with a strong foundation in 
+              Computer Science and a drive to make the world a better place through technology. With 
+              experience in both frontend and backend development, I thrive on creating efficient, user-friendly 
+              solutions and inclusive systems that improves people’s lives for a better future. During 
+              my work experience, I modernized legacy systems, optimized performance, and 
+              ensured accessibility for all users.</p>
+            <p className='about'>My portfolio showcases projects where I’ve applied my technical skills to 
+              real-world problems, from creating responsive web interfaces to designing 
+              scalable backend infrastructures. When I'm not coding, you can find me with 
+              a book or at a yoga class.</p>
           </div>
         </div>
       );

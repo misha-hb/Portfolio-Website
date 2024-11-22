@@ -25,10 +25,10 @@ const projects = [
 const Projects = () => {
   return (
     <div className="projects-section">
-      <h2 className="projects-title">Projects</h2>
+      <h1 className="projects-title">Projects</h1>
       <div className="projects-grid">
         {projects.map((project) => (
-          <div key={project.id} className="project-card" style={{ backgroundColor: getCardColor(project.id) }}>
+          <div key={project.id} className="project-card" style={{ backgroundColor: '#fafae3' }}>
             <div className="project-card-content">
               <h3 className="project-card-title">{project.title}</h3>
               <p className="project-card-description">{project.description}</p>
@@ -39,11 +39,6 @@ const Projects = () => {
       </div>
     </div>
   );
-};
-
-const getCardColor = (id) => {
-  const colors = ['#E8F3FD', '#CDE1F9', '#91BDEB'];
-  return colors[(id - 1) % colors.length];
 };
 
 export default Projects;

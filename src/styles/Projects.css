@@ -1,20 +1,21 @@
 .projects-section {
-  background-color: #e2f4fd; /* Background color for the projects section */
+  background-color: white;
   padding: 50px 20px; 
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  min-height: 100vh; /* Adjust height based on navbar height */
+  align-items: center;
+  justify-content: center; 
+  min-height: 100vh; 
 }
 
 .projects-title {
-  font-size: 2.5rem; /* Title font size */
-  font-family: cursive2;
-  margin-bottom: 6rem; /* Space below the title */
-  text-shadow: 1px 0 #86CCE2, 0 5px #86CCE2, 5px 0 #86CCE2, 0 1px #86CCE2;
-  color: #A9E0F1;
+  font-size: 2.5rem;
+  font-family: 'notosans';
+  color: #030723;
+  font-weight: bolder;
+  margin-bottom: 3rem !important;
 }
+
 
 .projects-grid {
   display: grid;
@@ -25,7 +26,7 @@
 }
 
 .project-card {
-  background-color: #FDEEDC; /* Default pastel background color */
+  background-color: #FDEEDC;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -37,13 +38,15 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+
+
 .project-card-content {
   text-align: center;
 }
 
 .project-card-title {
-  font-size: 1.8rem;
-  font-family: 'rolemodel';
+  font-size: 1.5rem;
+  font-family: 'notosans';
   color: #000000;
   margin-bottom: 15px;
 }
@@ -51,8 +54,7 @@
 .project-card-description {
   font-size: 1.1rem;
   line-height: 1.5;
-  font-family: 'rolemodel';
-  font-weight: bold;
+  font-family: 'notosans';
   color: #333;
 }
 

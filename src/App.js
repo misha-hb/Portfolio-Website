@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/Home';
 import Projects from './components/Projects';
@@ -8,10 +8,34 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import './App.css';
 
 function App() {
+  const [currentSection, setCurrentSection] = useState('home'); // Track current section
+
+  // Use IntersectionObserver to detect the current section
+  useEffect(() => {
+    const sections = document.querySelectorAll('section');
+    const options = {
+      root: null,
+      threshold: 0.5, // 50% of the section needs to be visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setCurrentSection(entry.target.id);
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the section
+      section.scrollIntoView({ behavior: 'smooth' }); 
     }
   };
 
@@ -32,6 +56,10 @@ function App() {
         <section id="home"><Home /></section>
         <section id="projects"><Projects /></section>
         <section id="contact"><Contact /></section>
+
+        <div className="scroll-arrow" onClick={() => scrollToSection(currentSection === 'contact' ? 'home' : 'contact')}>
+        {currentSection === 'contact' ? '↑' : '↓'}
+      </div>
     </Router>
   );
 }
