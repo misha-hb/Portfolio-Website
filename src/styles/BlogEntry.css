@@ -1,0 +1,58 @@
+.blog-entry-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'notosans';
+    position: relative; /* Needed for the button's absolute positioning */
+  }
+  
+  .blog-entry-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #030723;
+    margin-bottom: 10px;
+  }
+  
+  .blog-entry-timestamp {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 20px;
+  }
+  
+  .blog-entry-content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 50px; /* Add space to prevent overlap with the button */
+  }
+  
+  .fixed-back-link {
+    position: fixed; /* Fix position relative to the viewport */
+    bottom: 20px; /* 20px from the bottom */
+    left: 40px; /* 20px from the right */
+    font-size: 1.5rem;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    font-family: 'notosans';
+    
+  }
+
+  .fixed-back-link::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjusted to ensure it's closer to the text */
+    width: 0;
+    height: 7px; /* Slim underline effect */
+    background-color: #DE7E5D; /* Same color as in your Home page */
+    transition: width 0.7s ease; /* Smooth underline animation */
+  }
+  
+  .fixed-back-link:hover::after {
+    width: 100%; /* Expand underline width to full on hover */
+  }
