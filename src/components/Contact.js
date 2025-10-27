@@ -4,6 +4,7 @@ import github from '../images/github.png';
 import linkedin from '../images/linkedin.png';
 import email from '../images/mail.png';
 import resume from '../images/resume.png';
+import { trackEvent } from '../analytics';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,11 +32,27 @@ const Contact = () => {
       })
     }).then((response) => {
       if (response.ok) {
+        trackEvent('contact_submit', {
+          method: 'form',
+          location: 'contact_page',
+        });
         setSubmitted(true);
         setFormData({ name: '', email: '', message: '' });
+      } 
+      else {
+          trackEvent('contact_submit_failed', {
+            method: 'form',
+            location: 'contact_page',
+            status: response.status,
+          });
       }
     }).catch((error) => {
       console.error('Error:', error);
+      trackEvent('contact_submit_error', {
+          method: 'form',
+          location: 'contact_page',
+          error: error.toString(),
+      });
     });
   };
 
@@ -82,16 +99,52 @@ const Contact = () => {
             )}
           </div>
           <div className="icon-links">
-              <a href="https://github.com/misha-hb" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="https://github.com/misha-hb" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => {
+                  trackEvent('outbound_click', {
+                    destination: 'github',
+                    location: 'contact',
+                  });
+                }}
+              >
                 <img src={github} alt="GitHub" className="icon" />
               </a>
-              <a href="https://linkedin.com/in/mishabutt" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="https://linkedin.com/in/mishabutt" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => {
+                  trackEvent('outbound_click', {
+                    destination: 'linkedin',
+                    location: 'contact',
+                  });
+                }}
+              >
                 <img src={linkedin} alt="LinkedIn" className="icon" />
               </a>
-              <a href="mailto:mishahumayun2@gmail.com">
+              <a 
+                href="mailto:mishahumayun2@gmail.com"
+                onClick={() => {
+                  trackEvent('outbound_click', {
+                    destination: 'email',
+                    location: 'contact',
+                  });
+                }}>
                 <img src={email} alt="Email" className="icon" />
               </a>
-              <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="/Resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => {
+                  trackEvent('outbound_click', {
+                    destination: 'resume',
+                    location: 'contact',
+                  });
+                }}>
                 <img src={resume} alt="Resume" className="icon" />
               </a>
             </div>
